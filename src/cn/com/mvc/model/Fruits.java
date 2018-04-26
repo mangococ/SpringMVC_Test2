@@ -7,10 +7,10 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 
 public class Fruits {
-	private int id;//id����
-    private String name; //ˮ����
-    private double price; //�۸�
-    private String producing_area; //���
+	private int id;
+    private String name; 
+    private double price; 
+    private String producing_area; 
 	public int getId() {
 		return id;
 	}
