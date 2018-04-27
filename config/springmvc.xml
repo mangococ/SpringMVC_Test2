@@ -17,12 +17,39 @@
 		
 		
 		<!-- 处理器映射器 -->
-        <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" /> 
+      <!--  <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />  --> 
          <!-- 处理器适配器 -->
-		 <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
+		<!-- <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />  -->
+		 <!-- 处理器适配器 -->
+		<!-- <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" /> -->
+		<!-- <bean class="org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter"/>  -->
+		
+		
+		 
+		<!--处理器映射器  -->
+		<!--  <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>  -->
+		<!-- bean -->
+	<!-- <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		 <property name="mappings">
+		    <props>
+		      <prop key="/queryFruits_test1.action">fruitsController</prop>
+		      <prop key="/queryFruits_test2.action">fruitsController</prop>
+		    </props>
+		 </property>
+		 </bean> -->	 
+		<!-- 配置handler -->
+		<!--  <bean id="fruitsController" class="cn.com.mvc.controller.FruitsControllerTest"/>-->
+       
+       <!-- 注解的处理器映射器和适配器 -->
+       <mvc:annotation-driven></mvc:annotation-driven>
+       <!-- 配置handler -->
+       <context:component-scan base-package="cn.com.mvc.controller"></context:component-scan>
+		
 		 <!-- 视图解析器 -->
 		<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"></bean>
 		<!-- 配置Handler -->
-		<bean name="/queryFruits_test.action" class="cn.com.mvc.controller.FruitsControllerTest"></bean>
+	<!--  	<bean name="/queryFruits_test.action" class="cn.com.mvc.controller.FruitsControllerTest"/>-->
+		
+		
 		
 </beans>

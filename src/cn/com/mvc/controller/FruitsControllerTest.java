@@ -8,14 +8,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
-
 import cn.com.mvc.model.Fruits;
-
 
 public class FruitsControllerTest implements Controller{
 
 	private FruitsService fruitsService = new FruitsService();
-	
 	public ModelAndView handleRequest(HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		//模拟Service获取水果商品列表  
